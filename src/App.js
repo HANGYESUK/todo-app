@@ -26,6 +26,7 @@ function App() {
 
   const nextId = useRef(4);
 
+  
   const onInsert = useCallback((text)=>{
     const todo = {
       id : nextId.current,
@@ -35,6 +36,7 @@ function App() {
     setTodos([...todos, todo]);
     nextId.current += 1;
   }, [todos]);
+
 
   const onRemove = useCallback(
     (id) => {
